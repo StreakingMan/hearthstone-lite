@@ -1,0 +1,44 @@
+@for $index from 0 through 32 {
+    $offset-size: $index * 2;
+    $position-map: (
+        r: right,
+        l: left,
+        b: bottom,
+        t: top,
+    );
+
+    .gap-#{$offset-size} {
+        gap: #{$offset-size}px;
+    }
+
+    @each $position in t, r, b, l, x, y, a {
+        @each $key, $val in (p: padding, m: margin) {
+            .#{$key}#{$position}-#{$offset-size} {
+                @if $position == x {
+                    #{$val}-left: #{$offset-size}px !important;
+                    #{$val}-right: #{$offset-size}px !important;
+                } @else if $position == y {
+                    #{$val}-top: #{$offset-size}px !important;
+                    #{$val}-bottom: #{$offset-size}px !important;
+                } @else if $position == a {
+                    #{$val}: #{$offset-size}px !important;
+                } @else {
+                    #{$val}-#{map-get($position-map, $position)}: #{$offset-size}px !important;
+                }
+            }
+            .#{$key}#{$position}-n#{$offset-size} {
+                @if $position == x {
+                    #{$val}-left: #{-$offset-size}px !important;
+                    #{$val}-right: #{-$offset-size}px !important;
+                } @else if $position == y {
+                    #{$val}-top: #{-$offset-size}px !important;
+                    #{$val}-bottom: #{-$offset-size}px !important;
+                } @else if $position == a {
+                    #{$val}: #{-$offset-size}px !important;
+                } @else {
+                    #{$val}-#{map-get($position-map, $position)}: #{$offset-size}px !important;
+                }
+            }
+        }
+    }
+}

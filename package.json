@@ -9,7 +9,9 @@
         "prepare": "husky install"
     },
     "dependencies": {
-        "vue": "^3.2.41"
+        "animate.css": "^4.1.1",
+        "vue": "^3.2.41",
+        "vue-router": "4"
     },
     "devDependencies": {
         "@commitlint/cli": "^17.2.0",

@@ -1,0 +1,28 @@
+@import 'flex';
+@import 'gap';
+@import 'font';
+@import 'side';
+
+@font-face {
+    font-family: Smiley;
+    src: url('../assets/fonts/SmileySans-Oblique.otf') format('opentype'),
+        url('../assets/fonts/SmileySans-Oblique.ttf') format('truetype'),
+        url('../assets/fonts/SmileySans-Oblique.ttf.woff2') format('woff2'),
+        url('../assets/fonts/SmileySans-Oblique.otf.woff2') format('woff2');
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+    font-family: Smiley, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}

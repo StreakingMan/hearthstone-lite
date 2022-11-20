@@ -1,4 +1,6 @@
-<template>app</template>
+<template>
+    <RouterView />
+</template>
 
 <script setup lang="ts">
 //
