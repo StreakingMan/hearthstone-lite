@@ -1,0 +1,10 @@
+.cursor__pointer {
+    cursor: pointer;
+}
+
+.hover__scale {
+    transition: 0.1s;
+    &:hover {
+        transform: scale(1.2);
+    }
+}
