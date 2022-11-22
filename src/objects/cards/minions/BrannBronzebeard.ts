@@ -1,5 +1,5 @@
-import { Minion } from '../../classes/cards/Minion';
-import { Rarity } from '../../classes/cards/BaseCard';
+import { Minion } from '../../../classes/cards/Minion';
+import { Rarity } from '../../../classes/cards/BaseCard';
 
 export const BrannBronzebeard = new Minion({
     name: '布莱恩·铜须',
