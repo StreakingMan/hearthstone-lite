@@ -2,8 +2,8 @@
     <div
         class="flex-spacer"
         :style="{
-            minWidth: minWidth ? minWidth + 'px' : null,
-            maxWidth: maxWidth ? maxWidth + 'px' : null,
+            minWidth: minWidth ? minWidth + 'px' : undefined,
+            maxWidth: maxWidth ? maxWidth + 'px' : undefined,
         }"
     ></div>
 </template>
