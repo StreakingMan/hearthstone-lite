@@ -1,7 +1,12 @@
 {
     "name": "hearthstone-lite",
+    "description": "网易暴雪谈崩？炉石停运？无所谓，我会出手",
     "version": "1.0.0",
     "main": "dist-electron/main/index.js",
+    "author": {
+        "email": "z_max_y@163.com",
+        "name": "streakingman"
+    },
     "scripts": {
         "dev": "vite",
         "build": "vue-tsc --noEmit && vite build && electron-builder",
@@ -48,5 +53,6 @@
         "env": {
             "VITE_DEV_SERVER_URL": "http://127.0.0.1:3344"
         }
-    }
+    },
+    "license": "MIT"
 }
