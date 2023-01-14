@@ -44,6 +44,8 @@ async function createWindow() {
     win = new BrowserWindow({
         title: 'Main window',
         icon: join(process.env.PUBLIC, 'favicon.png'),
+        width: 1920,
+        height: 1080,
         webPreferences: {
             preload,
             // Warning: Enable nodeIntegration and disable contextIsolation is not secure in production
@@ -59,6 +61,7 @@ async function createWindow() {
         win.loadURL(url);
         // Open devTool if the app is not packaged
         win.webContents.openDevTools();
+        win.maximize();
     } else {
         win.loadFile(indexHtml);
     }
