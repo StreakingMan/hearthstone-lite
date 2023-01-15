@@ -1,45 +1,49 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
+import Home from './pages/Home.vue';
+import Hearthstone from './pages/Hearthstone/Index.vue';
+import NotFinish from './pages/NotFinish.vue';
+import NotFound from './pages/404.vue';
 
 const routes: RouteRecordRaw[] = [
     {
         path: '/',
-        component: () => import('./pages/Home.vue'),
+        component: Home,
     },
     {
         path: '/hearthstone',
         name: 'hearthstone',
-        component: () => import('./pages/Hearthstone/Index.vue'),
+        component: Hearthstone,
     },
     {
         path: '/battlegrounds',
         name: 'battlegrounds',
-        component: () => import('./pages/NotFinish.vue'),
+        component: NotFinish,
     },
     {
         path: '/mercenaries',
         name: 'mercenaries',
-        component: () => import('./pages/NotFinish.vue'),
+        component: NotFinish,
     },
     {
         path: '/modes',
         name: 'modes',
-        component: () => import('./pages/NotFinish.vue'),
+        component: NotFinish,
     },
     {
         path: '/myCollection',
         name: 'myCollection',
-        component: () => import('./pages/NotFinish.vue'),
+        component: NotFinish,
     },
     {
         path: '/openPacks',
         name: 'openPacks',
-        component: () => import('./pages/NotFinish.vue'),
+        component: NotFinish,
     },
 
     {
         path: '/:pathMatch(.*)*',
         name: 'NotFound',
-        component: () => import('./pages/404.vue'),
+        component: NotFound,
     },
 ];
 

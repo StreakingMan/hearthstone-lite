@@ -19,6 +19,7 @@
                 arch: ['x64'],
             },
         ],
+        icon: 'public/hearthstone-lite-icon.ico',
         artifactName: '${productName}_${version}.${ext}',
     },
     nsis: {

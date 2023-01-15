@@ -43,7 +43,7 @@ const indexHtml = join(process.env.DIST, 'index.html');
 async function createWindow() {
     win = new BrowserWindow({
         title: 'Main window',
-        icon: join(process.env.PUBLIC, 'favicon.png'),
+        icon: join(process.env.PUBLIC, 'hearthstone-lite-icon.ico'),
         width: 1920,
         height: 1080,
         webPreferences: {
