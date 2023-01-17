@@ -1,3 +1,5 @@
+import { HeroClass } from '../Hero';
+
 export enum Rarity {
     COMMON = '普通',
     RARE = '稀有',
@@ -11,6 +13,8 @@ export interface CardInfo {
     // TODO 水晶和铸币是否用同一字段？
     cost?: number;
     rarity: Rarity;
+    // 没有职业的卡牌为中立卡牌
+    heroClass?: HeroClass;
 }
 
 export class BaseCard implements CardInfo {
@@ -18,13 +22,12 @@ export class BaseCard implements CardInfo {
     readonly description;
     readonly cost;
     readonly rarity;
+    readonly heroClass;
     constructor(info: CardInfo) {
-        // for (const [key, value] of Object.entries(info)) {
-        //     this[key] = value;
-        // }
         this.name = info.name;
         this.description = info.description;
         this.cost = info.cost;
         this.rarity = info.rarity;
+        this.heroClass = info.heroClass;
     }
 }
