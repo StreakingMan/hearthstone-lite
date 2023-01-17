@@ -1,6 +1,6 @@
 <template>
     <div
-        class="flex-spacer"
+        class="grow"
         :style="{
             minWidth: minWidth ? minWidth + 'px' : undefined,
             maxWidth: maxWidth ? maxWidth + 'px' : undefined,

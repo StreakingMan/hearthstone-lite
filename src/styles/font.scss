@@ -1,9 +1,0 @@
-@for $i from 1 through 12 {
-    .fz-#{$i} {
-        font-size: $i + em !important;
-    }
-
-    .fw-#{$i} {
-        font-weight: $i * 100 !important;
-    }
-}

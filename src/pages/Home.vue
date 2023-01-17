@@ -19,7 +19,7 @@
             <RouterLink class="nav" to="/battlegrounds">酒馆战棋</RouterLink>
             <RouterLink class="nav" to="/mercenaries">佣兵战纪</RouterLink>
             <RouterLink class="nav" to="/modes">其他模式</RouterLink>
-            <div class="flex-container gap-64">
+            <div class="flex gap-14">
                 <FlexSpacer />
                 <RouterLink class="nav" to="/openPacks">开包</RouterLink>
                 <FlexSpacer />
@@ -77,32 +77,16 @@ setTimeout(() => {
 }
 
 .title {
-    font-size: 12em;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    transition: 1s;
+    @apply text-9xl font-semibold flex items-center justify-center h-screen transition-transform;
+
     animation: title-move 3s ease-in-out;
 }
 
 .navs {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    gap: 32px;
+    @apply flex flex-col justify-center items-center gap-12 h-screen;
 }
 
 .nav {
-    font-size: 6em;
-    cursor: pointer;
-    transition: 0.1s;
-
-    &:hover {
-        transform: scale(1.2);
-    }
+    @apply text-7xl cursor-pointer hover:scale-125 transition-transform;
 }
 </style>

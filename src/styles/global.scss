@@ -1,9 +1,6 @@
-@import 'flex';
-@import 'gap';
-@import 'font';
-@import 'side';
-@import 'interact';
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @font-face {
     font-family: Smiley;
     src: url('../assets/fonts/SmileySans-Oblique.otf') format('opentype'),

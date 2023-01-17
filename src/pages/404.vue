@@ -1,11 +1,12 @@
 <template>
-    <div
-        class="flex-container flex-center flex-column gap-24 full-screen-height"
-    >
-        <div class="fz-8 fw-6 animate__animated animate__bounceIn">
+    <div class="flex flex-col justify-center items-center gap-24 h-screen">
+        <div class="text-9xl font-semibold animate__animated animate__bounceIn">
             404 Not Found 😭
         </div>
-        <RouterLink to="/" class="fz-4 fw-4 cursor__pointer hover__scale">
+        <RouterLink
+            to="/"
+            class="text-7xl font-semibold cursor__pointer hover__scale"
+        >
             返回首页
         </RouterLink>
     </div>
