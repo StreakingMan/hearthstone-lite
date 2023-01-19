@@ -18,6 +18,7 @@ export interface CardInfo {
 }
 
 export class BaseCard implements CardInfo {
+    private _id = '';
     readonly name;
     readonly description;
     readonly cost;
@@ -29,5 +30,11 @@ export class BaseCard implements CardInfo {
         this.cost = info.cost;
         this.rarity = info.rarity;
         this.heroClass = info.heroClass;
+    }
+    get id() {
+        return this._id;
+    }
+    set id(id: string) {
+        this._id = id;
     }
 }

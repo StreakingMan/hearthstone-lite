@@ -1,4 +1,4 @@
-import { BaseCard } from './cards/BaseCard';
+import { BaseCard } from './card/BaseCard';
 import {
     localGet,
     localSave,
