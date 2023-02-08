@@ -12,7 +12,20 @@ module.exports = {
         'stylelint-config-prettier',
     ],
     rules: {
-        'at-rule-no-unknown': null,
+        'at-rule-no-unknown': [
+            true,
+            {
+                ignoreAtRules: [
+                    'tailwind',
+                    'apply',
+                    'variants',
+                    'responsive',
+                    'screen',
+                    'mixin',
+                    'include',
+                ],
+            },
+        ],
         'selector-class-pattern': null,
         'selector-pseudo-class-no-unknown': [
             true,

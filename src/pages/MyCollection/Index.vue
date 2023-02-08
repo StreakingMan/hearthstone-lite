@@ -1,3 +1,14 @@
-<template>''</template>
+<script setup lang="ts">
+import Card from '../../components/Card.vue';
+</script>
+<template>
+    <div class="container">
+        <Card />
+    </div>
+</template>
 
-<script setup lang="ts"></script>
+<style scoped>
+.container {
+    @apply flex items-center justify-center h-screen;
+}
+</style>
