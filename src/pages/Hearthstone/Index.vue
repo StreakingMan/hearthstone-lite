@@ -7,5 +7,3 @@
         返回首页
     </RouterLink>
 </template>
-
-<script setup lang="ts"></script>

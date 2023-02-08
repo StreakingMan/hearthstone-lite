@@ -1,3 +1,7 @@
+<script setup lang="ts">
+//
+</script>
+
 <template>
     <div class="card__wrapper">
         <div class="card__meta cost">
@@ -15,12 +19,6 @@
         <div class="card__meta health"><div class="num">4</div></div>
     </div>
 </template>
-
-<script>
-export default {
-    name: 'Card',
-};
-</script>
 
 <style scoped lang="scss">
 .card {

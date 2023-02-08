@@ -1,3 +1,16 @@
+<script setup lang="ts">
+import FlexSpacer from '../components/FlexSpacer.vue';
+import { computed } from 'vue';
+
+const VISIT_TAG = 'VISIT-TAG';
+
+const showTitle = computed<boolean>(() => !sessionStorage.getItem(VISIT_TAG));
+
+setTimeout(() => {
+    sessionStorage.setItem(VISIT_TAG, 'stuff');
+}, 300);
+</script>
+
 <template>
     <div :class="{ 'container-move': showTitle }">
         <div v-if="showTitle" class="title">
@@ -28,19 +41,6 @@
         </div>
     </div>
 </template>
-
-<script setup lang="ts">
-import FlexSpacer from '../components/FlexSpacer.vue';
-import { computed } from 'vue';
-
-const VISIT_TAG = 'VISIT-TAG';
-
-const showTitle = computed<boolean>(() => !sessionStorage.getItem(VISIT_TAG));
-
-setTimeout(() => {
-    sessionStorage.setItem(VISIT_TAG, 'stuff');
-}, 300);
-</script>
 
 <style lang="scss" scoped>
 @keyframes container-move {
