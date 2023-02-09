@@ -1,52 +1,47 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 import Home from './pages/Home.vue';
-import Hearthstone from './pages/Hearthstone/Index.vue';
-import MyCollection from './pages/MyCollection/Index.vue';
-import NotFinish from './pages/NotFinish.vue';
 import NotFound from './pages/404.vue';
+import { toKebabCase } from './utils/string';
 
-const routes: RouteRecordRaw[] = [
-    {
-        path: '/',
-        component: Home,
-    },
-    {
-        path: '/hearthstone',
-        name: 'hearthstone',
-        component: Hearthstone,
-    },
-    {
-        path: '/battlegrounds',
-        name: 'battlegrounds',
-        component: NotFinish,
-    },
-    {
-        path: '/mercenaries',
-        name: 'mercenaries',
-        component: NotFinish,
-    },
-    {
-        path: '/modes',
-        name: 'modes',
-        component: NotFinish,
-    },
-    {
-        path: '/myCollection',
-        name: 'myCollection',
-        component: MyCollection,
-    },
-    {
-        path: '/openPacks',
-        name: 'openPacks',
-        component: NotFinish,
-    },
+const routes: RouteRecordRaw[] = [];
 
-    {
-        path: '/:pathMatch(.*)*',
-        name: 'NotFound',
-        component: NotFound,
-    },
-];
+// 批量引入路由
+interface PageSFCFiles {
+    [path: string]: RouteRecordRaw['component'];
+}
+const pages: PageSFCFiles = import.meta.glob('./pages/**/*.vue');
+const exclude = ['404', 'home', 'not-finish'];
+for (const path in pages) {
+    const pathSplit = path.split('/').map((item) => toKebabCase(item));
+    let name = pathSplit.slice(-1)[0].replace('.vue', '');
+    if (name === 'index') {
+        name = pathSplit.slice(-2)[0];
+    }
+    if (exclude.includes(name)) {
+        continue;
+    }
+    routes.push({
+        path: `/${name}`,
+        name,
+        component: pages[path],
+        children: [],
+    });
+}
+
+routes.push(
+    ...[
+        {
+            path: '/',
+            name: 'home',
+            component: Home,
+        },
+        {
+            path: '/:pathMatch(.*)*',
+            name: 'not-found',
+            component: NotFound,
+        },
+    ]
+);
 
 export const router = createRouter({
     history: createWebHistory(),

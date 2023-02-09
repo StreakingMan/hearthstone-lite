@@ -34,9 +34,11 @@ setTimeout(() => {
             <RouterLink class="nav" to="/modes">其他模式</RouterLink>
             <div class="flex gap-14">
                 <FlexSpacer />
-                <RouterLink class="nav" to="/openPacks">开包</RouterLink>
+                <RouterLink class="nav" to="/open-packs">开包</RouterLink>
                 <FlexSpacer />
-                <RouterLink class="nav" to="/myCollection">我的收藏</RouterLink>
+                <RouterLink class="nav" to="/my-collection">
+                    我的收藏
+                </RouterLink>
             </div>
         </div>
     </div>
