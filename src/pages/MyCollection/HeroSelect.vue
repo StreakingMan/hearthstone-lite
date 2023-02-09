@@ -1,17 +1,16 @@
 <script setup lang="ts">
-import Card from '../../components/Card.vue';
+import Hero from '../../components/Hero.vue';
 import { useRouter } from 'vue-router';
 const router = useRouter();
 </script>
 <template>
     <div class="container">
-        <Card />
-        <button @click="$router.push('/hero-select')">新建套牌</button>
-        <button @click="$router.push('/')">返回</button>
+        <Hero />
+        <button @click="router.back()">返回</button>
     </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .container {
     @apply flex items-center justify-center h-screen;
 }
