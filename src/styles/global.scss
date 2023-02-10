@@ -24,3 +24,9 @@ a {
     color: inherit;
     text-decoration: none;
 }
+
+button {
+    @apply text-4xl p-6 transition-all
+    rounded-hand-drawn-0 border-4 border-black
+    hover:bg-gray-200 hover:rounded-hand-drawn-3 hover:font-extrabold
+}

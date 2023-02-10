@@ -5,7 +5,7 @@
 <template>
     <div class="card__wrapper">
         <div class="card__meta cost">
-            <div class="num">3</div>
+            <div class="num">31</div>
         </div>
         <div class="card__picture">
             <img src="../assets/cards/铜须/铜须.png" alt="" />
@@ -23,12 +23,19 @@
 <style scoped lang="scss">
 .card {
     &__wrapper {
-        width: 300px;
         @apply relative inline-block aspect-[0.73]
-        border-8 rounded-2xl border-black
         flex flex-col
         bg-white
-        select-none;
+        select-none
+        w-full min-w-[250px];
+
+        &::before {
+            @apply absolute inset-0
+            border-8 border-black rounded-hand-drawn-1 rotate-2
+            pointer-events-none;
+
+            content: '';
+        }
     }
 
     &__picture {
